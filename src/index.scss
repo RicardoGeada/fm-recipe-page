@@ -27,3 +27,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: var(--color-stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

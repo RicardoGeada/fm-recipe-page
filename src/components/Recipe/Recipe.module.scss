@@ -1,0 +1,43 @@
+@use "./../../fonts.scss";
+
+.recipe {
+  width: 100%;
+  max-width: 736px;
+  padding: var(--space-500);
+  background-color: var(--color-white);
+  border-radius: var(--space-300);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-500);
+
+  &__image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--space-150);
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-400);
+  }
+
+  // === Recipe Header ===
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-300);
+  }
+
+  &__title {
+    @include fonts.apply-text-preset("1");
+    color: var(--color-stone-900);
+  }
+
+  &__description {
+    @include fonts.apply-text-preset("4");
+    color: var(--color-stone-600);
+  }
+}
