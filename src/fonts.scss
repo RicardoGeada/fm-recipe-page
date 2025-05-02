@@ -1,0 +1,74 @@
+@use "sass:map";
+
+@font-face {
+    font-family: "Young Serif";
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400, 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400, 700;
+    font-display: swap;
+}
+
+$text-presets: (
+    "1": (
+        size: 40px,
+        weight: 400,
+        line-height: 1,
+        letter-spacing: 0,
+        font-family: ('Young Serif', Georgia, 'Times New Roman', serif),
+    ),
+    "2": (
+        size: 28px,
+        weight: 400,
+        line-height: 1,
+        letter-spacing: 0,
+        font-family: ('Young Serif', Georgia, 'Times New Roman', serif),
+    ),
+    "3": (
+        size: 20px,
+        weight: 600,
+        line-height: 1,
+        letter-spacing: 0,
+        font-family: ('Young Serif', Georgia, 'Times New Roman', serif),
+    ),
+    "4": (
+        size: 16px,
+        weight: 400,
+        line-height: 1.5,
+        letter-spacing: 0,
+        font-family: ('Outfit', 'Poppins', 'Montserrat', sans-serif),
+    ),
+    "4--bold": (
+        size: 16px,
+        weight: 700,
+        line-height: 1.5,
+        letter-spacing: 0,
+        font-family: ('Outfit', 'Poppins', 'Montserrat', sans-serif),
+    ),
+);
+
+
+@mixin apply-text-preset($name) {
+    $preset: map.get($text-presets, $name);
+    @if $preset {
+        font-size: map.get($preset, size);
+        font-weight: map.get($preset, weight);
+        line-height: map.get($preset, line-height);
+        letter-spacing: map.get($preset, letter-spacing);
+        font-family: map.get($preset, font-family);
+    } 
+};
+
+
+@each $name, $style in $text-presets {
+    .text-#{$name} {
+        @include apply-text-preset($name);
+    }
+}
