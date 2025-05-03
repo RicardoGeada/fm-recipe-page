@@ -4,7 +4,7 @@
     font-family: "Young Serif";
     src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
     font-style: normal;
-    font-weight: 400, 600;
+    font-weight: 400;
     font-display: swap;
 }
 
@@ -12,7 +12,7 @@
     font-family: "Outfit";
     src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
     font-style: normal;
-    font-weight: 400, 700;
+    font-weight: 400, 600, 700;
     font-display: swap;
 }
 
@@ -36,7 +36,7 @@ $text-presets: (
         weight: 600,
         line-height: 1,
         letter-spacing: 0,
-        font-family: ('Young Serif', Georgia, 'Times New Roman', serif),
+        font-family: ('Outfit', 'Poppins', 'Montserrat', sans-serif),
     ),
     "4": (
         size: 16px,

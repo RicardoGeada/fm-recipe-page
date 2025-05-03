@@ -4,7 +4,6 @@ import image from "./../../assets/images/image-omelette.jpeg";
 function Recipe() {
   return (
     <div className={styles["recipe"]}>
-        
       {/* image */}
       <img
         className={styles["recipe__image"]}
@@ -14,7 +13,6 @@ function Recipe() {
 
       {/* text content */}
       <div className={styles["recipe__text-content"]}>
-
         {/* header - title & description */}
         <section className={styles["recipe__header"]}>
           <h1 className={styles["recipe__title"]}>Simple Omelette Recipe</h1>
@@ -25,7 +23,21 @@ function Recipe() {
           </p>
         </section>
 
-
+        {/* preparation time */}
+        <section className={styles["recipe__preparation-time"]}>
+          <h3>Preparation time</h3>
+          <ul>
+            <li>
+              <strong>Total</strong>: Approximately 10 minutes
+            </li>
+            <li>
+              <strong>Preparation</strong>: 5 minutes
+            </li>
+            <li>
+              <strong>Cooking</strong>: 5 minutes
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
   );

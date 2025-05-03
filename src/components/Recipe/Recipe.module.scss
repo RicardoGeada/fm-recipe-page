@@ -40,4 +40,40 @@
     @include fonts.apply-text-preset("4");
     color: var(--color-stone-600);
   }
+
+
+  // === Preparation Time ===
+  &__preparation-time {
+    padding: var(--space-300);
+    background-color: var(--color-rose-50);
+    border-radius: var(--space-150);
+
+    h3 {
+      @include fonts.apply-text-preset("3");
+      color: var(--color-rose-800);
+      margin-bottom: var(--space-200);
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      padding-left: var(--space-100);
+    }
+
+    li {
+      @include fonts.apply-text-preset("4");
+      color: var(--color-stone-600);
+
+      strong {
+        color: var(--color-stone-800);
+      }
+    }
+
+    li::marker {
+      color: var(--color-rose-800)
+    }
+  }
+
+
+  
 }
