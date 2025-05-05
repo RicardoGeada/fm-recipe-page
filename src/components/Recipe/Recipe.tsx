@@ -47,7 +47,9 @@ function Recipe() {
             <li>Salt, to taste</li>
             <li>Pepper, to taste</li>
             <li>1 tablespoon of butter or oil</li>
-            <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+            <li>
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
+            </li>
           </ul>
         </section>
 
@@ -59,31 +61,66 @@ function Recipe() {
           <h2>Instructions</h2>
           <ol>
             <li>
-              <strong>Beat the eggs</strong>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-              You can add a tablespoon of water or milk for a fluffier texture.
+              <strong>Beat the eggs</strong>: In a bowl, beat the eggs with a
+              pinch of salt and pepper until they are well mixed. You can add a
+              tablespoon of water or milk for a fluffier texture.
             </li>
             <li>
-              <strong>Heat the pan:</strong>: Place a non-stick frying pan over medium heat and add butter or oil.
+              <strong>Heat the pan:</strong>: Place a non-stick frying pan over
+              medium heat and add butter or oil.
             </li>
             <li>
-              <strong>Cook the omelette</strong>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-              the eggs evenly coat the surface.
+              <strong>Cook the omelette</strong>: Once the butter is melted and
+              bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
+              coat the surface.
             </li>
             <li>
-              <strong>Add fillings (optional)</strong>: When the eggs begin to set at the edges but are still slightly runny in the 
-              middle, sprinkle your chosen fillings over one half of the omelette.
+              <strong>Add fillings (optional)</strong>: When the eggs begin to
+              set at the edges but are still slightly runny in the middle,
+              sprinkle your chosen fillings over one half of the omelette.
             </li>
             <li>
-              <strong>Enjoy</strong>: Serve hot, with additional salt and pepper if needed.
+              <strong>Enjoy</strong>: Serve hot, with additional salt and pepper
+              if needed.
             </li>
             <li>
-              <strong>Beat the eggs</strong>: Serve hot, with additional salt and pepper if needed.
+              <strong>Beat the eggs</strong>: Serve hot, with additional salt
+              and pepper if needed.
             </li>
           </ol>
         </section>
 
         {/* line */}
         <div className="line--h"></div>
+
+        {/* nutrition */}
+        <section className={styles["recipe__nutrition"]}>
+          <h2>Nutrition</h2>
+          <p>
+            The table below shows nutritional values per serving without the
+            additional fillings.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Calories</th>
+                <td>277kcal</td>
+              </tr>
+              <tr>
+                <th>Carbs</th>
+                <td>0g</td>
+              </tr>
+              <tr>
+                <th>Protein</th>
+                <td>20g</td>
+              </tr>
+              <tr>
+                <th>Fat</th>
+                <td>22g</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </div>
   );
