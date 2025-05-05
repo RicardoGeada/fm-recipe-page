@@ -103,4 +103,30 @@
       }
     }
   }
+
+  // === Instructions ===
+  &__instructions {
+    h2 {
+      @include fonts.apply-text-preset("2");
+      color: var(--color-brown-800);
+      margin-bottom: var(--space-300);
+    }
+
+    ol {
+      padding-left: var(--space-300);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-100);
+    }
+
+    li {
+      @include fonts.apply-text-preset("4");
+      color: var(--color-stone-600);
+      padding-left: var(--space-200);
+      &::marker {
+        color: var(--color-rose-800);
+        font-weight: bold;
+      }
+    }
+  }
 }
