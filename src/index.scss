@@ -35,3 +35,14 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+// === separator ===
+.line {
+    background-color: var(--color-stone-150);
+
+    &--h {
+        @extend .line;
+        width: 100%;
+        height: 1px;
+    }
+}

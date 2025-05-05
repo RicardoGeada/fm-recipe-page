@@ -55,25 +55,52 @@
     }
 
     ul {
-      list-style: disc;
-      list-style-position: inside;
-      padding-left: var(--space-100);
+      list-style:  "•";
+      padding-left: var(--space-200);
     }
 
     li {
       @include fonts.apply-text-preset("4");
       color: var(--color-stone-600);
+      padding-left: var(--space-300);
 
       strong {
         color: var(--color-stone-800);
       }
+
+      &::marker {
+        color: var(--color-rose-800);
+        font-weight: bold;
+      }
     }
 
-    li::marker {
-      color: var(--color-rose-800)
-    }
   }
 
 
-  
+  // === Ingredients ===
+  &__ingredients {
+    h2 {
+      @include fonts.apply-text-preset("2");
+      color: var(--color-brown-800);
+      margin-bottom: var(--space-300);
+    }
+
+    ul {
+      list-style:  "•";
+      padding-left: var(--space-200);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-100);
+    }
+
+    li {
+      @include fonts.apply-text-preset("4");
+      color: var(--color-stone-600);
+      padding-left: var(--space-300);
+      &::marker {
+        color: var(--color-rose-800);
+        font-weight: bold;
+      }
+    }
+  }
 }
