@@ -37,6 +37,12 @@ body {
     padding: var(--space-1600) var(--space-600);
 }
 
+@media (max-width: 576px) {
+    body {
+        padding: 0;
+    }
+}
+
 // === separator ===
 .line {
     background-color: var(--color-stone-150);

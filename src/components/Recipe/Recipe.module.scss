@@ -168,3 +168,20 @@
     
   }
 }
+
+
+@media (max-width: 576px) {
+  .recipe {
+      border-radius: 0;
+      padding: 0;
+      gap: 0;
+
+      &__image {
+        border-radius: 0;
+      }
+
+      &__text-content {
+        padding: var(--space-500) var(--space-400);
+      }
+  }
+}
