@@ -1,0 +1,20 @@
+@use "./../../../../fonts.scss";
+
+.recipe {
+  // === Recipe Header ===
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-300);
+  }
+
+  &__title {
+    @include fonts.apply-text-preset("1");
+    color: var(--color-stone-900);
+  }
+
+  &__description {
+    @include fonts.apply-text-preset("4");
+    color: var(--color-stone-600);
+  }
+}

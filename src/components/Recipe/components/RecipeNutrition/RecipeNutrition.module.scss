@@ -1,0 +1,43 @@
+@use "./../../../../fonts.scss";
+
+.recipe {
+  // === Nutrition ===
+  &__nutrition {
+    h2 {
+      @include fonts.apply-text-preset("2");
+      color: var(--color-brown-800);
+      margin-bottom: var(--space-300);
+    }
+
+    p {
+      @include fonts.apply-text-preset("4");
+      color: var(--color-stone-600);
+      margin-bottom: var(--space-100);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tr:not(:last-child) {
+        border-bottom: 1px solid var(--color-stone-150);
+      }
+
+      th,
+      td {
+        padding: var(--space-150) var(--space-400);
+      }
+
+      th {
+        @include fonts.apply-text-preset("4");
+        color: var(--color-stone-600);
+        text-align: left;
+      }
+
+      td {
+        @include fonts.apply-text-preset("4--bold");
+        color: var(--color-brown-800);
+      }
+    }
+  }
+}
