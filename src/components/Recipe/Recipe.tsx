@@ -1,5 +1,4 @@
 import styles from "./Recipe.module.scss";
-import image from "./../../assets/images/image-omelette.jpeg";
 import {
   RecipeHeader,
   RecipePreparationTime,
@@ -7,26 +6,27 @@ import {
   RecipeInstructions,
   RecipeNutrition,
 } from "./components";
+import type { Recipe } from "./types/Recipe.type";
 
-function Recipe() {
+function Recipe({ recipe }: Recipe) {
   return (
     <div className={styles["recipe"]}>
       {/* image */}
       <img
         className={styles["recipe__image"]}
-        src={image}
-        alt="simple omelette"
+        src={`images/${recipe.image}`}
+        alt={recipe.image}
       />
 
       {/* text content */}
       <div className={styles["recipe__text-content"]}>
-        <RecipeHeader />
-        <RecipePreparationTime />
-        <RecipeIngredients />
+        <RecipeHeader title={recipe.title} description={recipe.description} />
+        <RecipePreparationTime preparationTime={recipe.preparationTime} />
+        <RecipeIngredients ingredients={recipe.ingredients} />
         <div className="line--h"></div>
-        <RecipeInstructions />
+        <RecipeInstructions instructions={recipe.instructions} />
         <div className="line--h"></div>
-        <RecipeNutrition />
+        <RecipeNutrition nutrition={recipe.nutrition} />
       </div>
     </div>
   );

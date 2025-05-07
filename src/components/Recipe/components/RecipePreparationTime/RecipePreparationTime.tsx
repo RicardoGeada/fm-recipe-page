@@ -1,24 +1,25 @@
 import styles from "./RecipePreparationTime.module.scss";
 
-function RecipePreparationTime() {
+interface PreparationTimeProps {
+  preparationTime: { total: string; prep: string; cook: string };
+}
+
+function RecipePreparationTime({ preparationTime }: PreparationTimeProps) {
   return (
-    <>
-    {/* preparation time */}
     <section className={styles["recipe__preparation-time"]}>
-          <h3>Preparation time</h3>
-          <ul>
-            <li>
-              <strong>Total</strong>: Approximately 10 minutes
-            </li>
-            <li>
-              <strong>Preparation</strong>: 5 minutes
-            </li>
-            <li>
-              <strong>Cooking</strong>: 5 minutes
-            </li>
-          </ul>
-        </section>
-    </>
+      <h3>Preparation time</h3>
+      <ul>
+        <li>
+          <strong>Total</strong>: {preparationTime.total}
+        </li>
+        <li>
+          <strong>Preparation</strong>: {preparationTime.prep}
+        </li>
+        <li>
+          <strong>Cooking</strong>: {preparationTime.cook}
+        </li>
+      </ul>
+    </section>
   );
 }
 
