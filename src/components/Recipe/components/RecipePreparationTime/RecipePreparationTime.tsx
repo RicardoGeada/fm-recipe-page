@@ -7,7 +7,7 @@ interface PreparationTimeProps {
 function RecipePreparationTime({ preparationTime }: PreparationTimeProps) {
   return (
     <section className={styles["recipe__preparation-time"]}>
-      <h3>Preparation time</h3>
+      <h2>Preparation time</h2>
       <ul>
         <li>
           <strong>Total</strong>: {preparationTime.total}

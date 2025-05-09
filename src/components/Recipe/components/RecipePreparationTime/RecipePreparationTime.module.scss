@@ -7,7 +7,7 @@
     background-color: var(--color-rose-50);
     border-radius: var(--space-150);
 
-    h3 {
+    h2 {
       @include fonts.apply-text-preset("3");
       color: var(--color-rose-800);
       margin-bottom: var(--space-200);
