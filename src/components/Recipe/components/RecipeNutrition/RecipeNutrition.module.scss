@@ -35,6 +35,12 @@
         color: var(--color-brown-800);
         padding: var(--space-150) var(--space-400) var(--space-150) 0;
       }
+
+      tr:last-child {
+        th,td {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 }
